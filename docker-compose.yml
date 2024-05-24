@@ -1,0 +1,11 @@
+version: '2'
+services:
+  minecraft:
+    image: "ghcr.io/calimaborges/minecraft-bedrock-server/main:cab6ea281e6e4af3376b2b1a16ccae681688ee97"
+    network_mode: host
+    ports:
+      - "19132:19132"
+    volumes:
+      - minecraft-data:/opt/minecraft/worlds
+volumes:
+  minecraft-data:
